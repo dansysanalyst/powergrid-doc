@@ -33,8 +33,8 @@ You can chain the methods to configure the following features:
 
 Enables and displays checkboxes on each table row.
 
-::: info
-If your database table has a custom id column, you must pass the column name in the `$attribute` argument.
+::: info 📝 INFO
+ If your database table has a custom id column, you must pass the column name in the `$attribute` argument.
 :::
 
 Example:
@@ -310,7 +310,7 @@ class DishesTable extends PowerGridComponent
 }
 ```
 
-::: tip
+::: tip 💡 TIP
 Inside the view you can use the paginator `variables, perPage and perPageValues` to build the footer
 
 **NOTE:** need use methods `->showPerPage(25)->showRecordCount()`
@@ -353,7 +353,7 @@ class DishesTable extends PowerGridComponent
 }
 ```
 
-::: tip
+::: tip 💡 TIP
 > Inside the view you can use the component's variables
 :::
 
@@ -390,7 +390,7 @@ class DishesTable extends PowerGridComponent
 }
 ```
 
-::: tip
+::: tip 💡 TIP
 Inside the view you can use the component's variables
 :::
 
@@ -513,8 +513,8 @@ Example:
 ]),
 ```
 
-::: tip
-💡 If you are working with lots of data, we recommend to use [Queue Export](queue-export).
+::: tip 💡 TIP
+ If you are working with lots of data, we recommend to use [Queue Export](queue-export).
 ::: 
 
 ## Persist
@@ -627,8 +627,8 @@ class User
 Sometimes when we have a table with many columns, there will probably be scrolling, and user usability won’t be good.
 To fix this, use the Responsive feature. It will create a new row with the columns that were hidden.
 
-::: warning
-* Not available if used together with the Detail feature
+::: warning ⚠️ WARNING
+ * Not available if used together with the Detail feature
 * Not available when used in conjunction with inline filters
   :::
 
@@ -689,8 +689,8 @@ public function setUp(): array
 In some cases we need to show more information in the table, for example:
 _when selecting a product I would like to see which ingredients this product has or other information such as stock, billing, etc_.
 
-::: info
-> Note: The backend will only be queried when toggled.
+::: info 📝 INFO
+ > Note: The backend will only be queried when toggled.
 ::: 
 
 ### Usage
@@ -832,6 +832,6 @@ public function toggleDetailFromChild(string $id, string $state): void
 
 `rowsPerChildren(int $qty):` Sets the initial number of items to load. In this example, only 25 lines will be loaded initially. Additional items will be loaded automatically as the user scrolls.
 
-::: warning
-This feature does not support using Livewire components inside (Ex: addColumns, actions ...)
+::: warning ⚠️ WARNING
+ This feature does not support using Livewire components inside (Ex: addColumns, actions ...)
 :::

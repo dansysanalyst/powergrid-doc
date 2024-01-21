@@ -33,8 +33,8 @@ These methods will add action buttons to each cell of a specific column in your 
 
 * When the user clicks on the link, the cell turns into an input text.
 
-::: warning
-This method is not available for `Collection` PowerGrid tables.
+::: warning ⚠️ WARNING
+ This method is not available for `Collection` PowerGrid tables.
 :::
 
 | Parameter              | Description                                                                              | Default |
@@ -45,7 +45,7 @@ This method is not available for `Collection` PowerGrid tables.
 
 The content can be edited and saved by pressing the `<enter>` key.
 
-::: tip
+::: tip 💡 TIP
 If `$saveOnMouseOut` is '`true`', when pressing esc the value entered will be canceled and returned to the normal state.
 :::
 
@@ -61,10 +61,10 @@ Column::add()
     ->editOnClick($canEdit),
 ```
 
-::: details
+::: tip 💡 TIP
 When pressing enter, powergrid will send the received value to a public property, which you can use however you want, 
 but we recommend using the native powergrid method: `onUpdatedEditable`
-::: 
+:::
 
 ```php{3-8}
 public array $name = [];
@@ -79,8 +79,8 @@ public function onUpdatedEditable($id, $field, $value): void
 
 ### Validation
 
-::: warning
-To do the validation, make sure you put **$rules** and the **validate()** method before saving
+::: warning ⚠️ WARNING
+ To do the validation, make sure you put **$rules** and the **validate()** method before saving
 ::: 
 
 ```php{1,4,9}
@@ -104,8 +104,8 @@ Result:
 
 ![Output](/_media/examples/cell_buttons/editOnClick.png)
 
-::: warning
-* editOnClick on click requires [Update Data](update-data?id=update-data) method to be configured.
+::: warning ⚠️ WARNING
+ * editOnClick on click requires [Update Data](update-data?id=update-data) method to be configured.
 * This feature is not available when using table.column notation on $primaryKey (E.g., $primaryKey = 'dishes.name')
 :::
 
@@ -115,8 +115,8 @@ Result:
 
 * If `isToggleable` is `true`, the table cell will be converted into a `toggleable` button.
 
-::: warning
-This method is not available for `Collection` PowerGrid tables.
+::: warning ⚠️ WARNING
+ This method is not available for `Collection` PowerGrid tables.
 :::
 
 | Parameter            | Description                 | Default |
@@ -141,7 +141,7 @@ Column::add()
     ->toggleable($canEdit, 'yes', 'no'),
 ```
 
-::: tip
+::: tip 💡 TIP
 To get the data from a toggleable, use the `onUpdatedToggleable` method
 :::
 
@@ -157,8 +157,8 @@ Result:
 
 ![Output](/_media/examples/cell_buttons/toggleable.png)
 
-::: warning
-* toggleable requires [Update Data](update-data?id=update-data) method to be configured.
+::: warning ⚠️ WARNING
+ * toggleable requires [Update Data](update-data?id=update-data) method to be configured.
 * This feature is not available when using table.column notation on $primaryKey (E.g., $primaryKey = 'dishes.name').
 ::: 
 

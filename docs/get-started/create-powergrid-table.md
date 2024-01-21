@@ -66,12 +66,12 @@ In this example, we will use the `Dish` Model.
  └──────────────────────────────────────────────────────────────┘
 ```
 
-::: info
-📝 PowerGrid will use the default `App\Models` namespace unless you provide a full qualified class name (e.g., `App\MyModels\Dish`)
+::: info 📝 INFO
+PowerGrid will use the default `App\Models` namespace unless you provide a full qualified class name (e.g., `App\MyModels\Dish`)
 :::
 
-::: warning
-⚠️ If your primary key is not the `id` column, you declare the property `$primaryKey` in your component class.
+::: warning ⚠️ WARNING
+ If your primary key is not the `id` column, you declare the property `$primaryKey` in your component class.
 
 E.g, `protected $primaryKey = my_table.some_column;`
 :::

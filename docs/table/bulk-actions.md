@@ -2,9 +2,9 @@
 
 A Bulk Action is an efficient way to perform actions on one or more selected rows at the same time.
 
-::: warning
-Only available for Tailwind theme
-::: 
+::: warning ⚠️ WARNING
+ Only available for Tailwind theme
+:::
 
 To illustrate, imagine you that you need to select several "dishes" and mark them as "Sold-out".
 
@@ -121,8 +121,6 @@ window.pgBulkActions.get('detail') // detail is the name of the table.
 
 ![Output](/_media/examples/bulk-action-store-get.png)
 
-
-::: tip
+::: tip 💡 TIP
 When selecting an item, no request will be sent to the server.
 :::
-

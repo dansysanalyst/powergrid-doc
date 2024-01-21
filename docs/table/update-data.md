@@ -31,8 +31,8 @@ public function onUpdatedEditable(string|int $id, string $field, string $value):
 }
 ```
 
-::: warning
-You must treat and validate all data before the update query takes place. Additionally, you can also verify if the user has permission to edit data.
+::: warning ⚠️ WARNING
+ You must treat and validate all data before the update query takes place. Additionally, you can also verify if the user has permission to edit data.
 :::
 
 ---

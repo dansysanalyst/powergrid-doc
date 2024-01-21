@@ -2,6 +2,27 @@
 
 Filters can be configured under each column.
 
+## Configuaration
+
+PowerGrid offers inline and outside filters.
+
+**inline**: Filters data inside the table (default).
+
+**outside**: Filters data outside the table.
+
+Inline is configured by default. To modify, change `filter` setting in `config/livewire-powergrid.php`.
+
+Example:
+
+```php
+/*
+|--------------------------------------------------------------------------
+| Filters
+|--------------------------------------------------------------------------
+*/
+'filter' => 'outside',
+```
+
 ## Usage
 
 The filters must be declared inside the array returned in the 'filters' method.
@@ -69,8 +90,8 @@ You can customize your results using constructors and collection methods by pass
 
 * Each filter contains two methods: builder and collection.
 
-::: warning
-When you use the **builder** or **collection** methods, you are taking control of the filter.
+::: warning ⚠️ WARNING
+ When you use the **builder** or **collection** methods, you are taking control of the filter.
 :::
 
 * Builder example:
@@ -115,7 +136,7 @@ Filter::boolean('in_stock')
     ->component('my-custom-select', $attributes)
 ```
 
-::: tip
+::: tip 💡 TIP
 To use the default PowerGrid attributes, check in `$attributes->getAttributes()`
 :::
 
@@ -683,8 +704,8 @@ Result:
 If you don't want to load the multiselect data immediately when starting the page, you can use this feature, it helps your datatable behave faster. 
 As Powergrid uses TomSelect, set it in settings (here). 
 
-::: warning
-* Make sure you have [TomSelect](./column-filters.html#using-tomselect) set up beforehand.
+::: warning ⚠️ WARNING
+ * Make sure you have [TomSelect](./column-filters.html#using-tomselect) set up beforehand.
 * You must use an external API or create your own endpoint: route, controllers.
 ::: 
 

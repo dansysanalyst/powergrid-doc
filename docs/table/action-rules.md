@@ -169,7 +169,7 @@ Rule::button('order-dish')
 | (string) $event | Name of event |
 | (array) $params | Parameters    |
 
-::: tip
+::: tip 💡 TIP
 Read more about [Dispatch](https://livewire.laravel.com/docs/events#dispatching-events) in the Livewire documentation.
 :::
 
@@ -194,7 +194,7 @@ Rule::button('order-dish')
 | (string) $event | Name of event  |
 | (array) $params | Parameters     |
 
-::: tip
+::: tip 💡 TIP
 Read more about [Dispatch](https://livewire.laravel.com/docs/events#dispatching-events) in the Livewire documentation.
 :::
 
@@ -221,7 +221,7 @@ Read more in [Livewire](https://laravel-livewire.com/docs/2.x/events#scope-by-na
 | (string) $attribute | HTML attribute (class,id, x-on:click ...) |
 | (string) $value     | Attribute value                           |
 
-::: tip
+::: tip 💡 TIP
 Multiples are issued for the target **button** only
 ::: 
 
