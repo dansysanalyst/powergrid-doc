@@ -34,7 +34,7 @@ To change to Bootstrap 5, modify your `theme` option as follows:
     | Theme
     |--------------------------------------------------------------------------
     */
-    'theme' => \PowerComponents\LivewirePowerGrid\Themes\Bootstrap5::class, // [!code focus:1]
+    'theme' => \PowerComponents\LivewirePowerGrid\Themes\Bootstrap5::class, // [!code highlight:1]
     
 ```
 
@@ -61,7 +61,7 @@ If you use Tailwind JIT you must add PowerGrid files in `purge` inside the `tail
 module.exports = {
   content: [
       // ....
-      './app/Http/Livewire/**/*Table.php', // [!code focus:3]
+      './app/Http/Livewire/**/*Table.php', // [!code highlight:3]
       './vendor/power-components/livewire-powergrid/resources/views/**/*.php',
       './vendor/power-components/livewire-powergrid/src/Themes/Tailwind.php'
   ]
@@ -78,19 +78,19 @@ module.exports = {
 PowerGrid uses the **slate** color by default, you might want to change that, just insert the PowerGrid preset in the `tailwind.config.js` file
 
 ```js{7,13}
-const colors = require('tailwindcss/colors') // [!code focus:1]
+const colors = require('tailwindcss/colors') // [!code highlight:1]
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     presets: [
         require("./vendor/wireui/wireui/tailwind.config.js"),
-        require("./vendor/power-components/livewire-powergrid/tailwind.config.js"), // [!code focus:1]
+        require("./vendor/power-components/livewire-powergrid/tailwind.config.js"), // [!code highlight:1]
     ],
     // optional
     theme: {
         extend: {
             colors: {
-                "pg-primary": colors.gray, // [!code focus:1]
+                "pg-primary": colors.gray, // [!code highlight:1]
             },
         },
     },
