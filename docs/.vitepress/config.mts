@@ -57,7 +57,7 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Release Notes & Upgrade',
+        text: '📄 Release Notes & Upgrade',
         items: [
           { text: 'Release Notes', link: '/release-notes-and-upgrade/release-notes' },
           { text: 'Upgrade Guide', link: '/release-notes-and-upgrade/upgrade-guide' },
@@ -65,7 +65,7 @@ export default defineConfig({
         collapsed: true
       },
       {
-        text: 'Get Started',
+        text: '🚀 Get Started',
         items: [
           { text: 'Introduction', link: '/get-started/introduction' },
           { text: 'Code Examples', link: '/get-started/code-examples' },
@@ -77,7 +77,7 @@ export default defineConfig({
         collapsed: false
       },
       {
-        text: 'PowerGrid Features',
+        text: '⚙️ PowerGrid Features',
         items: [
           { text: 'Features Setup', link: '/table/features-setup' },
           { text: 'Datasource', link: '/table/datasource' },
@@ -94,7 +94,7 @@ export default defineConfig({
         collapsible: false,
       },
       {
-        text: 'Advanced Features',
+        text: '🪛 Advanced Features',
         items: [
           { text: 'Custom Theme', link: '/table/custom-theme' },
         ],

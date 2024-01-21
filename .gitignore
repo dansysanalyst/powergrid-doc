@@ -7,5 +7,6 @@ node_modules
 .env
 docs/.vitepress/dist
 docs/.vitepress/cache
+docs/.vitepress/config.mts.*timestamp*
 .idea
 .DS_Store
