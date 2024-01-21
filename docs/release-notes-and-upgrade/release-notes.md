@@ -90,7 +90,7 @@ class MyTable extends PowerGridComponent
 * Performance improvement and it is now possible to customize `withSum, withCount, withMin, withMax, withAVG`
 
 ::: info
-A new syntax has been added to allow for summary formation
+📝 A new syntax has been added to allow for summary formation
 :::
 
 ```php

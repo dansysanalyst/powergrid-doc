@@ -1,51 +1,73 @@
-# Configure
+# Configure PowerGrid
 
-## Import JS and CSS
+After a successful [installation](install.html#installation), you must now complete the following steps to use PowerGrid in your Laravel application.
 
-`resources/js/app.js`
+## 1. Import JS
+
+First, import PowerGrid's JavaScript assets.
+
+Add the following code to the file `resources/js/app.js`.
 
 ```javascript
 import './../../vendor/power-components/livewire-powergrid/dist/powergrid'
- 
-// If you use Tailwind 
-import './../../vendor/power-components/livewire-powergrid/dist/tailwind.css'
-
-// If you use Bootstrap 5 
-import './../../vendor/power-components/livewire-powergrid/dist/bootstrap5.css'
 ```
 
-## Choose your Theme
+## 2. Choose a theme
 
-PowerGrid supports Tailwind and Bootstrap 5 as Themes. Tailwind is selected by default.
+PowerGrid provides Tailwind and Bootstrap 5 themes.
 
-Your Theme can be set at `config/livewire-powergrid.php`.
+Tailwind is selected by default.
 
-To change to Bootstrap 5, modify your `theme` option as follows:
+If you prefer to use Bootstrap 5, change the key `theme` inside the file `config/livewire-powergrid.php`, as demonstrated here.
 
-::: tip
-💡 Read more how to customize your [Theme](../table/custom-theme).
-::: 
---- 
-
-## Bootstrap 5 settings
-```php{6}
+```php{8}
     /*
     |--------------------------------------------------------------------------
     | Theme
     |--------------------------------------------------------------------------
     */
-    'theme' => \PowerComponents\LivewirePowerGrid\Themes\Bootstrap5::class, // [!code highlight:1]
-    
+
+    //'theme' => \PowerComponents\LivewirePowerGrid\Themes\Tailwind::class,
+    'theme' => \PowerComponents\LivewirePowerGrid\Themes\Bootstrap5::class,
 ```
 
-Some features are not available in the Bootstrap version:
+### Tailwind only Features
+
+At the moment, the following features are exclusive to the Tailwind theme.
+
 * [Filters outside](configure?id=_7-filters)
 
-## Tailwind settings
+::: tip
+💡 Read more on how to create your own [Custom Theme](../table/custom-theme).
+:::
 
-#### Dark Mode
+## 3. Import theme Assets
 
-To enable Dark Mode, configure the `DarkMode` class in `tailwind.config.js` file as follows:
+Next, you must import the theme assets in the file `resources/js/app.js`.
+
+If your project is configured for Tailwind, add the following code.
+
+```javascript
+//Tailwind
+
+import './../../vendor/power-components/livewire-powergrid/dist/tailwind.css'
+```
+
+Alternatively, for Bootstrap 5, add the following code.
+
+```javascript
+//Bootstrap 5
+
+import './../../vendor/power-components/livewire-powergrid/dist/bootstrap5.css'
+```
+
+## 4. Configure Tailwind
+
+If you are using Tailwind, you may configure the options below.
+
+### Dark Mode
+
+To enable Dark Mode, configure the `DarkMode` class in the file `tailwind.config.js` as follows.
 
 ```javascript{2}
 module.exports = {
@@ -53,9 +75,9 @@ module.exports = {
 }
 ```
 
-#### JIT Production
+### JIT Production
 
-If you use Tailwind JIT you must add PowerGrid files in `purge` inside the `tailwind.config.js` file:
+If you use Tailwind JIT you must add PowerGrid files in `purge` inside the file `tailwind.config.js`:
 
 ```javascript{4-6}
 module.exports = {
@@ -73,9 +95,11 @@ module.exports = {
 💡 Read more about [Tailwind just-in-time](https://tailwindcss.com/docs/just-in-time-mode).
 :::
 
-#### Presets
+### Presets
 
-PowerGrid uses the **slate** color by default, you might want to change that, just insert the PowerGrid preset in the `tailwind.config.js` file
+PowerGrid uses the **slate** color by default.
+
+To use a different color, insert the PowerGrid preset in the file `tailwind.config.js`.
 
 ```js{7,13}
 const colors = require('tailwindcss/colors') // [!code highlight:1]
@@ -101,42 +125,19 @@ module.exports = {
 💡 Read more about [Tailwind Presets](https://tailwindcss.com/docs/presets).
 :::
 
-## Filters
+## 5. New Release Notification
 
-PowerGrid offers inline and outside filters.
+When you create a new Table, PowerGrid can let you know when a new release is available.
 
-**inline**: Filters data inside the table (default).
+To enable this feature, follow the steps below.
 
-**outside**: Filters data outside the table.
-
-Inline is configured by default. To modify, change `filter` setting in `config/livewire-powergrid.php`.
-
-Example:
-
-```php
-/*
-|--------------------------------------------------------------------------
-| Filters
-|--------------------------------------------------------------------------
-*/
-'filter' => 'outside',
-```
-
-## New Release Notification
-
-PowerGrid can verify if a new release is available when you create a new PowerGrid Table.
-
-![Output](/_media/notify_update.png)
-
-To enable this feature, follow the next steps:
-
-* Require composer as a developer dependency, running:
+5.1 Require composer as a developer dependency, running:
 
  ```bash
  composer require composer/composer --dev
  ```
 
-* Change `check_version` to `true` in `config/livewire-powergrid.php`.**
+5.2 Change `check_version` key to `true` inside the file `config/livewire-powergrid.php`.
 
 ```php{6}
 /*
@@ -144,6 +145,5 @@ To enable this feature, follow the next steps:
 | New Release Notification
 |--------------------------------------------------------------------------
 */
-'check_version' => true
+'check_version' => true,
 ```
-

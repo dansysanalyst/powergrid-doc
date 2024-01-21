@@ -1,10 +1,12 @@
-# Livewire PowerGrid
+# Introduction
 
-[Livewire](https://laravel-livewire.com) PowerGrid is a component for  generating dynamic tables with your Laravel Models and Collections.
+## PowerGrid
 
----
+[Livewire PowerGrid](https://laravel-livewire.com) creates modern, powerful and easy-to-customize Datatables based on Laravel Livewire library.
 
-Light: 
+With PowerGrid you can create tables like this in a matter of minutes.
+
+Light:
 
 ![Output](/_media/screenshot_light.png)
 
@@ -16,60 +18,71 @@ Dark:
 
 With PowerGrid you get right out of the box:
 
-√ **Filters & Search**
+✅ **Filters & Search**
 
-√ **Column Sorting**
+✅ **Column Sorting**
 
-√ **Column Sum, Count & Average in Header/Footer**
+✅ **Column Sum, Count & Average in Header/Footer**
 
-√ **Pagination**
+✅ **Pagination**
 
-√ **Action Checkboxes**
+✅ **Action Checkboxes**
 
-√ **Action Buttons**
+✅ **Action Buttons**
 
-√ **Bulk Actions**
+✅ **Bulk Actions**
 
-√ **Action Rules: Conditionally disable, hide and modify Action Buttons, Checkboxes and rows**
+✅ **Action Rules: Conditionally disable, hide and modify Action Buttons, Checkboxes and rows**
 
-√ **Toggle button**
+✅ **Toggle button**
 
-√ **Click to edit**
+✅ **Click to edit**
 
-√ **Responsive**
+✅ **Responsive**
 
-√ **Link inside a table cell**
+✅ **Link inside a table cell**
 
-√ **Livewire Modal Integration ([Wire Elements Modal](https://github.com/wire-elements/modal))**
+✅ **Livewire Modal Integration ([Wire Elements Modal](https://github.com/wire-elements/modal))**
 
-√ **Data Export to XLSX/CSV ([OpenSpout](https://github.com/openspout/openspout))**
+✅ **Data Export to XLSX/CSV ([OpenSpout](https://github.com/openspout/openspout))**
 
-√ **Queue Export for large tables**
+✅ **Queue Export for large tables**
 
-- **Works with Bootstrap 5 or Tailwind CSS 3x**
+✅ **Works with Bootstrap 5 or Tailwind CSS 3x**
 
-- **Translations available for 🇺🇸 🇧🇷 🇪🇸 🇮🇹 🇩🇪 and others...**
+✅ **Translations available for 🇺🇸 🇧🇷 🇪🇸 🇮🇹 🇩🇪 and others...**
 
-## Youtube
+## Video Resources
 
 Check out some PowerGrid reviews and usage videos on Youtube:
 
-- Livewire PowerGrid com Luan Freitas - Live Coding at [Live beer and code](https://www.youtube.com/watch?v=Mml5aagMOm4&t=20s) (🇧🇷 pt-BR)
+- Livewire PowerGrid: Quick Datatable Package REVIEW by [Laravel Daily](https://www.youtube.com/watch?v=Qj0GLZJzDLY&t=4s)
 
-- Livewire PowerGrid: Quick Datatable Package [REVIEW] by [Laravel Daily](https://www.youtube.com/watch?v=Qj0GLZJzDLY&t=4s)
+- Laravel Livewire: Crea DataTables Profesionales en Minutos con Powergrid by [
+Code with Luis](https://www.youtube.com/watch?v=sV6Rs2y8fWk) (🇸🇻 Spanish)
 
-- Tio Jobs Analisa As Novas Action Rules Do Pacote Power-Components PowerGrid by [Icaro Jobs](https://www.youtube.com/watch?v=8WLLHan1b-U) (🇧🇷 pt-BR)
+- Livewire PowerGrid com Luan Freitas - Live Coding at [Live beer and code](https://www.youtube.com/watch?v=Mml5aagMOm4&t=20s) (🇧🇷 Portuguese)
 
-All videos were recorded by community members. If you like them, don't forget to hit 👍 Like, share and subscribe to their channels. Your reaction contributes to the community!
+- Tio Jobs Analisa As Novas Action Rules Do Pacote Power-Components PowerGrid by [Icaro Jobs](https://www.youtube.com/watch?v=8WLLHan1b-U) (🇧🇷 Portuguese)
+
+All videos were recorded by community members. If you like them, don't forget to hit 👍 Like, share and subscribe to their channels.
+
+## Support & Community
+
+👥 Interact with the PowerGrid community at our [GitHub Discussions](https://github.com/Power-Components/livewire-powergrid/discussions) tab.
+
+_You can share ideas, find questions and answers, and collaborate with other PowerGrid users._
+
+🛟 For technical inquiries, bug reports, and feature requests, please use the [GitHub Issues](https://github.com/Power-Components/livewire-powergrid/issues) tab.
+
+_Please look into our previous Issues and Discussions before submitting a new issue.__
 
 
-## Support
+## Contribute
 
-For questions, issues, bug reports and feature requests, please use [PowerGrid](https://github.com/Power-Components/livewire-powergrid) official GitHub Repository.
+🙏 You can help PowerGrid in a number of ways; contributing goes beyond writing code.
 
-Please look into our previous issues to verify if your bug/question or feature request has been previously submitted.
-
-📣 Submit a [new issue](https://github.com/Power-Components/livewire-powergrid/issues).
+Please read the [Contributing Guide](https://github.com/Power-Components/livewire-powergrid/blob/5.x/CONTRIBUTING.md) to see what kind of contributions you can make and what steps you should follow.
 
 ## Credits
 
@@ -105,4 +118,5 @@ Created by: [Luan Freitas](https://twitter.com/luanfreitasdev) and [@DanSysAnaly
 
 <hr>
 
-<sup><b>Notice of Non-Affiliation and Disclaimer:</b> Livewire PowerGrid is not affiliated, associated, endorsed by, or in any way officially connected with the Laravel Livewire - copyright by Caleb Porzio.</sup>
+<sup><b>Notice of Non-Affiliation and Disclaimer:</b> Livewire PowerGrid is not affiliated with, associated with, endorsed by, or in any way officially connected with the <a href="https://laravel-livewire.com" target="_blank">Laravel Livewire</a> - copyright by Caleb Porzio. Laravel is a trademark of Taylor Otwell.</sup>
+
