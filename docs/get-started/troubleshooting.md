@@ -1,21 +1,18 @@
 # Troubleshooting
 
-## Flatpickr Locale Support.
+This section covers most frequent issues that users may encounter while using PowerGrid
 
-::: warning
-Depending on your location, flatpickr will not have the expected support, to solve this kind of problem you can add it in the settings.
-:::
+For technical inquiries, bug reports, and feature requests, please use our [GitHub Issues](https://github.com/Power-Components/livewire-powergrid/issues) tab.
 
-See an example:
-config/app.php is `'locale' => 'pt_BR'`,
+## Flatpickr Locale Support
 
-Do this in the settings:
+Sometimes Flatpick will not support your location's locale setting.
 
-::: info
-In this case, there is no support for **pt_BR**, so change locale pt_BR to **pt**
-:::
+For example, consider that your application is configured for `pt_BR` in `config/app.php` with `'locale' => 'pt_BR'`,
 
-`config/livewire-powergrid.php`
+In the file `config/livewire-powergrid.php`, you might have tried to add the same locale `pt_BR`.
+ the same string for locale.
+
 ```php{7}
      'plugins' => [
         // ...
@@ -32,3 +29,5 @@ In this case, there is no support for **pt_BR**, so change locale pt_BR to **pt*
         ],
     ],
 ```
+
+🛟 However, flatpick doesn't support support for `pt_BR`, instead, change it to `pt`.

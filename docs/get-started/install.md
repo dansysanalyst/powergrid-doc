@@ -9,9 +9,9 @@
 
 ## Installation
 
-### 1. Via Composer
+### 1. Install the package
 
-Require PowerGrid via [Composer](https://getcomposer.org/), run:
+First, require PowerGrid via [Composer](https://getcomposer.org/). Run the following command in your Laravel project.
 
 ```bash
 composer require power-components/livewire-powergrid
@@ -19,7 +19,7 @@ composer require power-components/livewire-powergrid
 
 ### 2. Publish Config files
 
-Publish PowerGrid configuration file. Run the following command:
+Next, publish PowerGrid's configuration file. Run the following command.
 
 ```bash
 php artisan vendor:publish --tag=livewire-powergrid-config
@@ -27,19 +27,23 @@ php artisan vendor:publish --tag=livewire-powergrid-config
 
 The configuration file will be available at: `config/livewire-powergrid.php`.
 
-### 3. Publish files (OPTIONAL)
+### 3. Configure PowerGrid
+
+All done! Now you are ready to go on and [configure](/get-started/configure.html) PowerGrid in your Laravel application.
+
+### 4. Publish files (OPTIONAL)
 
 ::: warning
-Skip this step if you don't need to customize views (not recommended) or language files.
-::: 
+⚠️ This step is only necessary if you wish to customize PowerGrid internal resources.
+:::
 
-To publish Views, run:
+To publish Views, run the following command.
 
 ```bash
 php artisan vendor:publish --tag=livewire-powergrid-views
 ```
 
-To publish Language files, run:
+To publish Language files, run the following command.
 
 ```bash
 php artisan vendor:publish --tag=livewire-powergrid-lang

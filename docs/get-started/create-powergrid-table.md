@@ -1,27 +1,24 @@
 # Create a PowerGrid Table
 
-::: warning
-You must have PowerGrid [installed](install.html#installation) and properly [configured](configure.html?id=configure#configure) before proceeding.
-:::
+After [installing](install.html#installation) and [configuring](configure.html?id=configure#configure) PowerGrid, it's time to create your first Table Component!
 
-### Create Command
+## Create a Table
 
-To create a PowerGrid table, run the following command:
+To create a PowerGrid table, run the following command in your Laravel project.
 
 ```bash
 php artisan powergrid:create  
 ```
 
-<br>
+The assistant will guide you through the process and help you generate your table component.
 
-Now, answer the question in your screen to complete the creation process:
+### 1. Enter the name of your PowerGrid Component
 
-**1. Enter the name of your PowerGrid Component.**
+Enter your table name.
 
-For example: `DishTable`.
+In this example, let's create a "__DishesTable__" containing all dishes served in a restaurant.
 
-```shell
-  powergrid [main] ⚡  > php artisan powergrid:create
+```plain
      __     ____                          ______     _     __
     / /_,  / __ \____ _      _____  _____/ ____/____(_)___/ /
     /_ ,' / /_/ / __ \ | /| / / _ \/ ___/ / __/ ___/ / __  / 
@@ -29,96 +26,101 @@ For example: `DishTable`.
         /_/    \____/|__/|__/\___/_/   \____/_/  /_/\__,_/     
 
  ┌ What is the name of your Table Component? ───────────────────┐
- │ UserTable                                                    │
+ │ DishesTable                                                  │
  └──────────────────────────────────────────────────────────────┘
-
 ```
 
 ---
 
-**2. Indicate if your component will use a Eloquent Builder, Query Builder or a Collection as data source.**
+### 2. Data Source
 
-This example uses Dish Eloquent Builder, so we choose `0`:
+Now, configure the data source from which your table will pull data.
 
-```shell
+<br/>
+
+#### 2.1. Select the data source
+
+Select the data source.
+
+In our example, let's use Laravel's Elloquent Builder.
+
+```plain
  ┌ What type of data source will you use? ──────────────────────┐
  │ › ● Eloquent Builder                                         │
  │   ○ Query Builder                                            │
  │   ○ Collection                                               │
  └──────────────────────────────────────────────────────────────┘
-
 ```
 
----
+#### 2.2. Model
 
-**3. If you choose Eloquent Builder, enter the path to your Model.**
+Next, enter the Model name to be connected to your table.
 
-In this example, the Dish Model is located at App\Models\Dish.
+In this example, we will use the `Dish` Model.
+
+```plain
+ ┌ Enter your Model name or file path ──────────────────────────┐
+ │ Dish                                                         │
+ ├──────────────────────────────────────────────────────────────┤
+ │   Dish                                                       │
+ └──────────────────────────────────────────────────────────────┘
+```
 
 ::: info
-If you don't specify App\Models -powergrid will create based on default App\Models directory.
+📝 PowerGrid will use the default `App\Models` namespace unless you provide a full qualified class name (e.g., `App\MyModels\Dish`)
 :::
-
-```shell
-┌ Enter your Model name or file path ───────────────────────────┐
- │ User                                                         │
- ├──────────────────────────────────────────────────────────────┤
- │   User                                                       │
- └──────────────────────────────────────────────────────────────┘
-
-```
-
----
-
-**4. Use Fillable?**
-
-PowerGrid can create columns based on your Model's `fillable` property.
-
-Supported databases are: MySQL, PostgresSQL and SQLite.
-
-If desirable, type `yes` to use this feature.
 
 ::: warning
-If you don't use the 'id' column as the primary key, you should make sure your model is `protected $primaryKey = null`;
+⚠️ If your primary key is not the `id` column, you declare the property `$primaryKey` in your component class.
+
+E.g, `protected $primaryKey = my_table.some_column;`
 :::
 
-```shell
-┌ Create columns based on Model's fillable property? ───────────┐
+#### 2.3. Fillable
+
+PowerGrid can automatically configure table columns based on the fields listed in your Model's `fillable` property.
+
+For this example, let's select `yes`.
+
+```plain
+ ┌ Create columns based on Model's fillable property? ──────────┐
  │ ● Yes / ○ No                                                 │
  └──────────────────────────────────────────────────────────────┘
 ```
 
-**⚡ PowerGrid Table created!**
+This feature is available only for MySQL, PostgreSQL and SQLite databases.
 
-PowerGrid indicates the location where your new Table component was created.
+### 3. Your PowerGrid Table is ready
 
-## Using Stubs
+At this step, you should see a message in your command prompt containing:
 
-PowerGrid can have multiple stubs, follow this step:
+- The namespace where your component was created.
+- The HTML tag to include it in your Blade View.
 
-* Publish
-* Make the changes
-* Rename if necessary
-* Use it using `--template` when creating
+In our example, we have:
 
---- 
+```plain
+ ⚡ DishesTable.php was successfully created at [app/Livewire/].
 
-## Publish command
+ ⚡ Your PowerGrid table can be now included with the tag: <livewire:dishes-table/>
+```
 
-::: info
-If you need to create multiple stubs, be sure to rename them before publishing.
-::: 
+🥳 You are now ready to [set up](/table/features-setup.html) your PowerGrid component features!
+
+## Component Stubs
+
+You may customize the default PowerGrid component, adapting it to your needs.
+
+To publish the stub, run the following command.
 
 ```bash
 php artisan powergrid:publish --type=stub
 ```
 
+If you need to create multiple stubs, be sure to rename the file after publishing each stub.
 
-## Create with template
-
-`--template`=full location of the stub template
+You may use the flag `--template` passing the full location of your stub when creating a new component.
 
 ```bash
-php artisan powergrid:create --template=stubs/table.model.stub
+php artisan powergrid:create --template=stubs/custom-component.stub
 ```
-
