@@ -83,7 +83,7 @@ If you use Tailwind JIT you must add PowerGrid files in `purge` inside the file 
 module.exports = {
   content: [
       // ....
-      './app/Http/Livewire/**/*Table.php', // [!code highlight:3]
+      './app/Http/Livewire/**/*Table.php',
       './vendor/power-components/livewire-powergrid/resources/views/**/*.php',
       './vendor/power-components/livewire-powergrid/src/Themes/Tailwind.php'
   ]
@@ -102,19 +102,19 @@ PowerGrid uses the **slate** color by default.
 To use a different color, insert the PowerGrid preset in the file `tailwind.config.js`.
 
 ```js{7,13}
-const colors = require('tailwindcss/colors') // [!code highlight:1]
+const colors = require('tailwindcss/colors')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     presets: [
         require("./vendor/wireui/wireui/tailwind.config.js"),
-        require("./vendor/power-components/livewire-powergrid/tailwind.config.js"), // [!code highlight:1]
+        require("./vendor/power-components/livewire-powergrid/tailwind.config.js"),
     ],
     // optional
     theme: {
         extend: {
             colors: {
-                "pg-primary": colors.gray, // [!code highlight:1]
+                "pg-primary": colors.gray,
             },
         },
     },

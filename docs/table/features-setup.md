@@ -76,7 +76,7 @@ public function setUp(): array
 
      return [
          Header::make()
-             ->showSearchInput(), // [!code highlight]
+             ->showSearchInput(),
 
          // ...
      ];
@@ -104,7 +104,7 @@ public function setUp(): array
 
      return [
          Header::make()
-             ->showToggleColumns(), // [!code highlight:1]
+             ->showToggleColumns(),
 
          // ...
      ];
@@ -130,7 +130,7 @@ public function setUp(): array
 
      return [
          Header::make()
-             ->includeViewOnTop('components.datatable.header-top'), // [!code highlight:1]
+             ->includeViewOnTop('components.datatable.header-top'),
 
          // ...
      ];
@@ -237,11 +237,11 @@ class DishesTable extends PowerGridComponent
     //Custom per page values
     public array $perPageValues = [0, 5, 10, 20, 50];// [!code highlight:1]
 
-    public function setUp(): array // [!code highlight:1]
+    public function setUp(): array
     {
         return [
             Footer::make()
-                ->showPerPage($this->perPage, $this->perPageValues) // [!code highlight:1]
+                ->showPerPage($this->perPage, $this->perPageValues)
             //....    
         ]   
     }
@@ -275,7 +275,7 @@ class DishesTable extends PowerGridComponent
     {
         return [
             Footer::make()
-                ->showRecordCount(mode: 'full') // [!code highlight:1]
+                ->showRecordCount(mode: 'full')
             //....    
         ]   
     }
@@ -303,7 +303,7 @@ class DishesTable extends PowerGridComponent
             Footer::make()
                 ->showPerPage(25)
                 ->showRecordCount()
-                ->pagination('components.pagination'), // [!code highlight:1]
+                ->pagination('components.pagination'),
             //....    
         ]   
     }
@@ -346,7 +346,7 @@ class DishesTable extends PowerGridComponent
     {
         return [
             Footer::make()
-                ->includeViewOnTop('components.datatable.footer-top') // [!code highlight:1]
+                ->includeViewOnTop('components.datatable.footer-top')
             //....    
         ]   
     }
@@ -383,7 +383,7 @@ class DishesTable extends PowerGridComponent
     {
         return [
             Footer::make()
-                ->includeViewOnBottom('components.datatable.footer-bottom') // [!code highlight:1]
+                ->includeViewOnBottom('components.datatable.footer-bottom')
             //....    
         ]   
     }
@@ -435,7 +435,7 @@ class DishesTable extends PowerGridComponent
 {
     public function setUp(): array
     {
-        Exportable::make('my-export-file') // [!code highlight:3]
+        Exportable::make('my-export-file')
             ->striped('#A6ACCD')
             ->type(Exportable::TYPE_XLS, Exportable::TYPE_CSV),
     }
@@ -470,7 +470,7 @@ When exporting to CSV, you may configure the `field separator` and `field delimi
 
 ```php
     Exportable::make('my-export-file')
-        ->csvSeparator('|') // [!code highlight:2]
+        ->csvSeparator('|')
         ->csvDelimiter("'")
         ->type(Exportable::TYPE_XLS, Exportable::TYPE_CSV),
 ```
@@ -528,7 +528,7 @@ class DishesTable extends PowerGridComponent
 {
     public function setUp(): array
     {
-        $this->persist(['columns', 'filters']); // [!code highlight:1]
+        $this->persist(['columns', 'filters']);
         
         return [
             // ..
@@ -554,7 +554,7 @@ use PowerComponents\LivewirePowerGrid\Traits\WithExport;
 
 final class YourPowerGridTable extends PowerGridComponent
 {
-     public bool $multiSort = true; // [!code highlight:1]
+     public bool $multiSort = true;
 }
 ```
 
@@ -580,7 +580,7 @@ public function setUp(): array
    $companyId = user()->company_id; // 233  
    
    return [
-       Cache::make() // [!code highlight:4]
+       Cache::make()
           ->forever(),
           ->prefix($companyId. '_') // tag generate: 233_powergrid-users-validationTable
          //->customTag('my-custom-tag')
@@ -642,7 +642,7 @@ use PowerComponents\LivewirePowerGrid\Responsive;
 public function setUp(): array
 {
     return [
-        Responsive::make(), // [!code highlight:1]
+        Responsive::make(),
     ];   
 }
 ```
@@ -678,7 +678,7 @@ public function setUp(): array
 {
     return [
         Responsive::make()
-            ->fixedColumns('id', 'chef_name', Responsive::ACTIONS_COLUMN_NAME); // [!code highlight:1]
+            ->fixedColumns('id', 'chef_name', Responsive::ACTIONS_COLUMN_NAME);
     ];
 }
 ```
@@ -710,7 +710,7 @@ This is an example:
     {
         return [
             // ..
-            Detail::make() // [!code highlight:4]
+            Detail::make()
                 ->view('components.detail')
                 ->options(['name' => 'Luan'])
                 ->showCollapseIcon(),
