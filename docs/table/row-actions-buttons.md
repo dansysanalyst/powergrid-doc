@@ -6,7 +6,7 @@ Row Action buttons can be configured inside `actions()` method, for each row or 
 
 To add a button, include a new `Button::add(string $action)` in the `actions(array|Model $row)` or `header()` method.
 
-::: tip
+::: tip 💡 TIP
 The $row parameter in actions indicates each item in your data source. It can be an array or a model.
 :::
 
@@ -111,7 +111,7 @@ Button::add('create-dish')
 | (string) $event          | Name of event |
 | (array, Closure) $params | Parameters    |
 
-::: tip
+::: tip 💡 TIP
 Read more about [Events](https://livewire.laravel.com/docs/events#dispatching-events) in the Livewire documentation.
 ::: 
 
@@ -143,7 +143,7 @@ is equivalent to:
 | (string) $event          | Name of event  |
 | (array, Closure) $params | Parameters     |
 
-::: tip
+::: tip 💡 TIP
 Read more about [Events](https://livewire.laravel.com/docs/events#dispatching-events) in the Livewire documentation.
 ::: 
 
@@ -175,8 +175,8 @@ is equivalent to:
 | (string) $component      | You must pass the `View` of Livewire Modal component. |
 | (array, Closure) $params | This is the component parameter.                      |
 
-::: warning
-You must install [Wire Elements Modal](https://github.com/wire-elements/modal) to use this functionality. More information is also available at its documentation.
+::: warning ⚠️ WARNING
+ You must install [Wire Elements Modal](https://github.com/wire-elements/modal) to use this functionality. More information is also available at its documentation.
 ::: 
 
 Example:
@@ -404,8 +404,8 @@ Button::macro('icon', function (string $name) {
 });
 ```
 
-::: warning
-Macros **should only be placed** in service providers.
+::: warning ⚠️ WARNING
+ Macros **should only be placed** in service providers.
 ::: 
 
 With mentioned additions `icon` can be accessed as regular method.

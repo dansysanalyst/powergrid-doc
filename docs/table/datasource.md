@@ -24,7 +24,7 @@ public function datasource(): ?Builder
 }
 ```
 
-::: tip
+::: tip 💡 TIP
 datasource supports these types of returns:
 * **Eloquent Builder** - \Illuminate\Database\Eloquent\Builder::class
 * **Query Builder** - \Illuminate\Database\Query\Builder::class

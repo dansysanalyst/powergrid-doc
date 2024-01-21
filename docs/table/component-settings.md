@@ -118,7 +118,7 @@ class DishesTable extends PowerGridComponent
 
 <br/>
 
-::: tip
+::: tip 💡 TIP
 📝 You might need to adjust the [->sortable()](include-columns?id=sortable) method in your fields when joining tables in your dataset.
 :::
 
@@ -129,7 +129,7 @@ Behind the scenes [wire:init](https://laravel-livewire.com/docs/2.x/defer-loadin
 
 By default, a text in the center '**Loading**' will be shown.
 
-::: tip
+::: tip 💡 TIP
 * If you want to change this behavior and use a custom view, you can assign the name in `$loadingComponent`.
 * It might be useful for you to put **withoutLoading** together with **DeferLoading**. [Header::withoutLoading](../table/features-setup.html#withoutloading)
 :::

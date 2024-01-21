@@ -19,8 +19,8 @@ Summaries are chained to the `Column::add()` method.
 | (bool) $footer  | If is `true`, Powergrid will create a row in the footer of the table.     | false   |
 
 
-::: warning
-This will pre-process all the data in your database to work with the sum of all records. **->get()**, in all cases, only one request is made;
+::: warning ⚠️ WARNING
+ This will pre-process all the data in your database to work with the sum of all records. **->get()**, in all cases, only one request is made;
 :::
 
 Example:

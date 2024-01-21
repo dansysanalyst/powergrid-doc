@@ -37,8 +37,8 @@ At the moment, the following features are exclusive to the Tailwind theme.
 
 * [Filters outside](configure?id=_7-filters)
 
-::: tip
-💡 Read more on how to create your own [Custom Theme](../table/custom-theme).
+::: tip 💡 TIP
+ Read more on how to create your own [Custom Theme](../table/custom-theme).
 :::
 
 ## 3. Import theme Assets
@@ -91,8 +91,8 @@ module.exports = {
 }
 ```
 
-::: tip
-💡 Read more about [Tailwind just-in-time](https://tailwindcss.com/docs/just-in-time-mode).
+::: tip 💡 TIP
+ Read more about [Tailwind just-in-time](https://tailwindcss.com/docs/just-in-time-mode).
 :::
 
 ### Presets
@@ -121,8 +121,8 @@ module.exports = {
 }
 ```
 
-::: tip
-💡 Read more about [Tailwind Presets](https://tailwindcss.com/docs/presets).
+::: tip 💡 TIP
+ Read more about [Tailwind Presets](https://tailwindcss.com/docs/presets).
 :::
 
 ## 5. New Release Notification

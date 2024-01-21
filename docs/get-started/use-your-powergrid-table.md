@@ -55,8 +55,8 @@ public function datasource(): ?Builder
 }
 ```
 
-::: tip
-💡 Read more about the [Datasource](../table/datasource.html) method.
+::: tip 💡 TIP
+ Read more about the [Datasource](../table/datasource.html) method.
 :::
 
 <hr/>

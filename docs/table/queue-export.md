@@ -6,8 +6,8 @@ Queue export will divide your records into batches, increasing the export perfor
 
 For instance, if you have 1 million records, you may set up 10 queues. Each batch will contain a total of 100,000 records.
 
-::: warning
-Queues only take effect when exporting ALL records. If you have manually selected some records, they will be exported in a single batch.
+::: warning ⚠️ WARNING
+ Queues only take effect when exporting ALL records. If you have manually selected some records, they will be exported in a single batch.
 ::: 
 
 <br/>

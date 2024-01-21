@@ -33,13 +33,13 @@ public function addColumns(): PowerGridColumns
 }
 ```
 
-::: warning
-After creating a column, you must include it in your Table using the [Column::add()](include-columns) method.
+::: warning ⚠️ WARNING
+ After creating a column, you must include it in your Table using the [Column::add()](include-columns) method.
 :::
 
 ### Sortable
-::: warning
-Whenever the column name is different from the one in the database, remember to reference it in dataField in the [Column::field()](include-columns?id=fieldstring-field-string-datafield) method otherwise sortable will not work.
+::: warning ⚠️ WARNING
+ Whenever the column name is different from the one in the database, remember to reference it in dataField in the [Column::field()](include-columns?id=fieldstring-field-string-datafield) method otherwise sortable will not work.
 :::
 
 ```php
@@ -91,8 +91,8 @@ public function columns(): array
 
 ### Searchable
 
-::: warning
-Always add the actual column name in the database if it is searchable.
+::: warning ⚠️ WARNING
+ Always add the actual column name in the database if it is searchable.
 :::
 <br/>
 
@@ -185,8 +185,8 @@ This is often the case with date, currency and boolean values.
 
 Let's check some examples using `closures` to format data!
 
-::: warning
-When using closures to output user defined values directly to HTML, you should escape user defined values using Laravel's [`e`](https://laravel.com/docs/9.x/helpers#method-e) helper to prevent XSS attacks.
+::: warning ⚠️ WARNING
+ When using closures to output user defined values directly to HTML, you should escape user defined values using Laravel's [`e`](https://laravel.com/docs/9.x/helpers#method-e) helper to prevent XSS attacks.
 :::
 
 ### Link in cell
@@ -208,8 +208,8 @@ public function addColumns(): PowerGridColumns
 
 The example above produces the HTML `<a href="https://www.google.com/maps/search/-22.973587702676607,-43.18527287193542">Copacabana</a>` which would look like: [Copacabana](https://www.google.com/maps/search/-22.973587702676607,-43.18527287193542).
 
-::: warning
-When using closures to output user defined values directly to HTML, you should escape user defined values using Laravel's [`e`](https://laravel.com/docs/9.x/helpers#method-e) helper to prevent XSS attacks.
+::: warning ⚠️ WARNING
+ When using closures to output user defined values directly to HTML, you should escape user defined values using Laravel's [`e`](https://laravel.com/docs/9.x/helpers#method-e) helper to prevent XSS attacks.
 :::
 
 <br/>
@@ -287,8 +287,8 @@ public function addColumns(): PowerGridColumns
 }
 ```
 
-::: warning
-When using closures to output user defined values directly to HTML, you should escape user defined values using Laravel's [`e`](https://laravel.com/docs/9.x/helpers#method-e) helper to prevent XSS attacks.
+::: warning ⚠️ WARNING
+ When using closures to output user defined values directly to HTML, you should escape user defined values using Laravel's [`e`](https://laravel.com/docs/9.x/helpers#method-e) helper to prevent XSS attacks.
 :::
 
 ### Boolean

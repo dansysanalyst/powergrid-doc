@@ -89,8 +89,8 @@ class MyTable extends PowerGridComponent
 
 * Performance improvement and it is now possible to customize `withSum, withCount, withMin, withMax, withAVG`
 
-::: info
-📝 A new syntax has been added to allow for summary formation
+::: info 📝 INFO
+ A new syntax has been added to allow for summary formation
 :::
 
 ```php
@@ -125,7 +125,7 @@ class MyTable extends PowerGridComponent
 
 * Added closure (`\Closure`) to datasource and `depends` method to check filter dependencies (`Filter::select`)
 
-::: info 
+::: info 📝 INFO
 In this case below, when filtering a category, the value will automatically be sent to the chef filter.
 ::: 
 

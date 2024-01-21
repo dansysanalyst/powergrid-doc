@@ -4,8 +4,8 @@ Table columns are controlled by the `columns()` method.
 
 You can find this method is inside your PowerGrid file (e.g., `DishTable.php`).
 
-::: warning
-Before proceeding, check if you have [Added the column](add-columns) in order to have it available for including.
+::: warning ⚠️ WARNING
+ Before proceeding, check if you have [Added the column](add-columns) in order to have it available for including.
 :::
 
 ## Usage
@@ -86,7 +86,7 @@ Column::add()
     ->title('Price in EUR'),
 ```
 
-::: tip
+::: tip 💡 TIP
 You can translate your title using Laravel's [translation strings](https://laravel.com/docs/8.x/localization#retrieving-translation-strings) feature.
 :::
 
@@ -161,8 +161,8 @@ Column::add()
     ->sortable(),
 ```
 
-::: warning
-If your column fetches data via relationship, you must `join` the related table in your [Datasource](datasource) query.
+::: warning ⚠️ WARNING
+ If your column fetches data via relationship, you must `join` the related table in your [Datasource](datasource) query.
 ::: 
 
 ---

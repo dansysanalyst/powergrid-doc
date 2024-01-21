@@ -33,8 +33,8 @@ All done! Now you are ready to go on and [configure](/get-started/configure.html
 
 ### 4. Publish files (OPTIONAL)
 
-::: warning
-⚠️ This step is only necessary if you wish to customize PowerGrid internal resources.
+::: warning ⚠️ WARNING
+ This step is only necessary if you wish to customize PowerGrid internal resources.
 :::
 
 To publish Views, run the following command.
