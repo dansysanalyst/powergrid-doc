@@ -10,7 +10,7 @@ Example of usage with an Eloquent Model:
 //..
 public function datasource(): ?Builder
 {
-  return Dish::query(); // [!code highlight:1]
+  return Dish::query();
 }
 ```
 
@@ -20,7 +20,7 @@ You can also load Relationships. See the following example:
 //..
 public function datasource(): ?Builder
 {
-  return Dish::query()->with('kitchen'); // [!code highlight:1]
+  return Dish::query()->with('kitchen');
 }
 ```
 
@@ -45,8 +45,8 @@ final class RestaurantsTable extends PowerGridComponent
 {
     use ActionButton;
 
-    public string $primaryKey = 'restaurants.custom_id'; // [!code highlight:1]
-    public string $sortField = 'restaurants.custom_id'; // [!code highlight:1]
+    public string $primaryKey = 'restaurants.custom_id';
+    public string $sortField = 'restaurants.custom_id';
 
      //...
 ```
@@ -62,7 +62,7 @@ The following example shows how to `join` the `categories` relationship:
 public function datasource(): ?Builder
 {
   return Dish::query()
-            ->join('categories', function ($categories) { // [!code highlight:3]
+            ->join('categories', function ($categories) {
                 $categories->on('dishes.category_id', '=', 'categories.id');
             })
             ->select([

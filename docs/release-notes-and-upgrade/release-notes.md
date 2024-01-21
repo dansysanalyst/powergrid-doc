@@ -27,7 +27,7 @@ The following items have been deprecated in this release:
     // 
   }
   
-  public function actions($row) // Model|array $row, // [!code highlight:6]
+  public function actions($row) // Model|array $row
   { 
     // 
   }
@@ -70,7 +70,7 @@ class MyTable extends PowerGridComponent
      {
          return [
             Button::add('edit')
-                ->icon(icon: 'pencil', attributes: ['w-5 h-5']) // [!code highlight]
+                ->icon(icon: 'pencil', attributes: ['w-5 h-5']) // [!code focus]
                  ->route('advices.edit', ['advice' => $dish->id]),
          ];
      }
