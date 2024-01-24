@@ -1,6 +1,6 @@
 # Column Summary
 
-PowerGrid can include data summaries inside each [columns()](include-columns) header.
+PowerGrid can include data summaries inside each [columns()](add-columns-to-table) header.
 
 Summaries can display the column's sum, count, average, min and max value.
 

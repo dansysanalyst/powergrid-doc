@@ -66,7 +66,7 @@ The example below will trigger a Browser alert:
     }
 ```
 
-Finally, for this example to work, you must listen for the `showAlert` in the blade file which renders your table (e.g, `dishes.blade.php`):
+Finally, for this example to work, you must listen for the `showAlert` in the blade file which renders your table (e.g., `dishes.blade.php`):
 
 ```php
 //...

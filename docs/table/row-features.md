@@ -1,8 +1,91 @@
-# Row Action Buttons
+# Row Features
 
 Row Action buttons can be configured inside `actions()` method, for each row or `header()` method.
 
-## Usage
+Actions - Todas as ‘actions’ serão processadas no lado do servidor, se voce estiver muitas Actions e usando Cache, considere usar actionsFromView. (Processado na renderização)
+
+[[toc]]
+
+## Checkboxes
+
+To enable checkboxes in every row, you must call the method `showCheckBox()` in your table `setUp()` method.
+
+`🌎` See a live example [here](xxx).
+
+Example:
+
+```php{3}
+public function setUp(): array
+{
+    $this->showCheckBox();
+
+    //$this->showCheckBox('my_custom_table_id');
+}
+```
+
+If your column uses a custom database column instead of `id`, you must pass it to the 
+
+---
+
+
+In some cases we need to show more information in the table, for example:
+_when selecting a product I would like to see which ingredients this product has or other information such as stock, billing, etc_.
+
+::: info 📝 INFO
+ > Note: The backend will only be queried when toggled.
+::: 
+
+### Usage
+
+To use the **Detail Row** you will need:
+
+* Tailwind theme active
+* Use the Detail class inside `setUp`.
+* Have a blade view to show the details.
+
+This is an example:
+
+`✅` See a live example [here](#).
+
+```php
+    use PowerComponents\LivewirePowerGrid\Detail;
+
+    public function setUp(): array
+    {
+        return [
+            // ..
+            Detail::make()
+                ->view('components.detail')
+                ->options(['name' => 'Luan'])
+                ->showCollapseIcon(),
+        ];
+    }
+```
+
+You can access your model data in the view file using the variable `$row`.
+
+```html
+<!-- File: resources/views/components/detail.blade.php -->
+
+<div class="p-2 bg-white border border-slate-200">
+    <div>Id {{ $id }}</div>
+    <div>Options @json($options)</div>
+
+    @if ($row->calories < 100)
+        <div>Diet dish!</div>
+    @endif
+
+</div>
+```
+
+Result:
+
+![Output](/_media/examples/features/detail-row-open.png)
+
+--- 
+
+
+## Row Buttons
 
 To add a button, include a new `Button::add(string $action)` in the `actions(array|Model $row)` or `header()` method.
 
@@ -45,11 +128,13 @@ public function actions(Dish $row): array
 
 The example above generates a gray button. When clicked, this button opens a new modal window.
 
-## Button Methods
+
+### Button Methods
+
 
 The methods below can be chained to the `PowerComponents\LivewirePowerGrid\Button` class.
 
-### add
+#### add
 
 Creates a new button.
 
@@ -67,7 +152,7 @@ Button::add('create-dish')
 
 ---
 
-### slot
+#### slot
 
 Render the html.
 
@@ -85,7 +170,7 @@ Button::add('create-dish')
 
 ---
 
-### class
+#### class
 
 * Sets the button CSS class attribute.
 
@@ -104,7 +189,7 @@ Button::add('create-dish')
 
 ---
 
-### dispatch
+#### dispatch
 
 | Parameter                | Description   | 
 |--------------------------|---------------|
@@ -112,7 +197,7 @@ Button::add('create-dish')
 | (array, Closure) $params | Parameters    |
 
 ::: tip 💡 TIP
-Read more about [Events](https://livewire.laravel.com/docs/events#dispatching-events) in the Livewire documentation.
+Read more about [Events](https://livewire.laravel.com/docs/events###dispatching-events) in the Livewire documentation.
 ::: 
 
 The code below:
@@ -135,7 +220,7 @@ is equivalent to:
 
 ---
 
-### dispatchTo
+#### dispatchTo
 
 | Parameter                | Description    | 
 |--------------------------|----------------|
@@ -144,7 +229,7 @@ is equivalent to:
 | (array, Closure) $params | Parameters     |
 
 ::: tip 💡 TIP
-Read more about [Events](https://livewire.laravel.com/docs/events#dispatching-events) in the Livewire documentation.
+Read more about [Events](https://livewire.laravel.com/docs/events###dispatching-events) in the Livewire documentation.
 ::: 
 
 The code below:
@@ -166,7 +251,7 @@ is equivalent to:
 ```
 ---
 
-### openModal
+#### openModal
 
 * Opens a modal window with wire-elements/modal packages
 
@@ -191,7 +276,7 @@ Button::add('view')
 
 ---
 
-### method
+#### method
 
 * Sets the action's HTTP method.
 
@@ -211,7 +296,7 @@ Button::add('view')
 
 ---
 
-### route
+#### route
 
 * Sets the action's route.
 
@@ -232,7 +317,7 @@ Button::add('view')
 
 ---
 
-### target
+#### target
 
 * Sets the target for the specified route.
 
@@ -253,7 +338,7 @@ Button::add('view')
 
 ---
 
-### can
+#### can
 
 * Sets Action's permission.
 
@@ -274,7 +359,7 @@ Button::add('edit-dish')
 
 ---
 
-### tooltip
+#### tooltip
 
 * Sets the button tooltip (title attribute).
 
@@ -293,7 +378,7 @@ Button::add('edit-dish')
 
 ---
 
-### toggleDetail
+#### toggleDetail
 
 * Toggle the [detailRow](detail-row)
 
@@ -305,7 +390,7 @@ Button::add('toggle-detail')
     ->toggleDetail(),
 ```
 
-### bladeComponent
+#### bladeComponent
 
 * Allows you to add a custom component overriding all default behavior
 
@@ -326,7 +411,7 @@ Button::add('my-custom-button')
 ```html
 <button type="button"
         class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-    My Custom Button #{{ $dishId }}
+    My Custom Button ###{{ $dishId }}
 </button>
 ```
 
@@ -335,13 +420,13 @@ Button::add('my-custom-button')
 ```html
 <button type="button"
         class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-    My Custom Button #1
+    My Custom Button ###1
 </button>
 ```
 
 ---
 
-### render
+#### render
 
 * Allows you to render HTML
 
@@ -362,7 +447,7 @@ HTML);
 
 ---
 
-### id
+#### id
 
 * Add custom html id attribute.
 
@@ -386,11 +471,11 @@ is equivalent to:
 <button id="view-1"> // 1 - is the value set in the current row using primaryKey = id.
 ```
 
-## Advanced usage
+### Advanced usage
 
-While the standard [button methods](#button-methods) can handle most tasks, there may be times when you need to customize the `Button` class to add extra functionality. Below are some examples of how to do so without interiefing with package internals.
+While the standard [button methods](###button-methods) can handle most tasks, there may be times when you need to customize the `Button` class to add extra functionality. Below are some examples of how to do so without interiefing with package internals.
 
-### Extending Button class
+#### Extending Button class
 
 While `Button` class cannot be extended directly, it is possible to add methods using [macros](https://laravel.com/api/9.x/Illuminate/Support/Traits/Macroable.html). Also, this class has built-in `dynamicProperties` variable which can be used to store custom method parameters.
 
@@ -417,3 +502,52 @@ Button::add('new-modal')
     ->icon('fa-window')
     ->openModal('new', []),
 ```
+
+## Row Actions From View
+
+PowerGrid offers the possibility to render a custom view inside each row's "Action" column.
+
+This is useful when you need to build a combination of actions for a complex scenario or when working with cache on a large dataset.
+
+### Usage
+
+First, you must include an `action` in your table columns. See the example below.
+
+```php
+public function columns(): array
+{
+    return [
+        // ... other columns ...
+        Column::action('Action'), // [!code ++]
+    ];
+}
+```
+
+Then, add the method `actionsFromView()` to your PowerGrid table.
+
+```php
+use Illuminate\View\View;
+
+public function actionsFromView($row): View
+{
+    return view('actions-view', ['row' => $row]);
+}
+```
+
+The `$row` variable contains a **rendered table row**, and you must pass it to your view.
+
+Your view may look something like the example below.
+
+```blade
+// resources/views/actions-view.blade.php
+
+<div>
+    @if($row->in_stock == 'Yes')
+        <button>Order now</button>
+    @else
+        - out of sock -
+    @endif
+</div>
+```
+
+In this demonstration, the button "Order now" will only appear for dishes in stock.

@@ -18,7 +18,7 @@ To enable queue export, you must configure the methods by calling the Facade Exp
 
 - `->queues()`: Number of queues to be used.
 - `->onQueue()`: Queue name. If blank, `default` will be used.
-- `->onConnection()`: Connection. Read more in [Laravel Queue Documentation](https://laravel.com/docs/8.x/queues#introduction).
+- `->onConnection()`: Connection. Read more in [Laravel Queue Documentation](https://laravel.com/docs/queues#introduction).
 - public property `$showExporting`: Show the export progress on the screen if `true` (default).
 
 Example:
@@ -91,6 +91,6 @@ public function onBatchExecuting(Batch $batch): void
 
 <br/>
 
-> 💡 **TIP:**  Read more about Batches in Laravel [Documentation](https://laravel.com/docs/8.x/queues#inspecting-batches).
+> 💡 **TIP:**  Read more about Batches in Laravel [Documentation](https://laravel.com/docs/queues#inspecting-batches).
 
 

@@ -848,3 +848,37 @@ public function relationSearch(): array
 
 The example above adds the relationship to the `kitchen`  Model and allows the column `name` to be searched.
 
+
+### Before Search
+beforeSearch can be run if you want to change the behavior of the ‘search’ property before performing the search within the PowerGrid.
+This is useful when we have to deal with the query before querying the database.
+
+
+For example, we have a phone field without a mask in the database, but the user types the search with a mask.
+With this PR you can process before removing the characters that do not need to be sent in the query
+
+```php
+
+public function columns()
+{
+    return [
+        Column::make('Phone', 'phone_editable', 'phone')
+            ->searchable(),
+    ];
+}
+
+public function beforeSearchPhone($search): string
+{
+    return str($search)->replaceMatches('/[^0-9]+/', '')->toString();
+}
+
+public function beforeSearch(string $field = null, string $search = null)
+{
+    if ($field === 'phone') {
+         return str($search)->replaceMatches('/[^0-9]+/', '')->toString();
+    }
+
+    return $search;
+}
+
+```

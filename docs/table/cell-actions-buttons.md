@@ -1,6 +1,6 @@
 # Cell Action Buttons
 
-Cell Action buttons can be configured in each column inside the [columns()](include-columns) method.
+Cell Action buttons can be configured in each column inside the [columns()](add-columns-to-table) method.
 
 This method is inside your PowerGrid file (e.g. `DishTable.php`).
 

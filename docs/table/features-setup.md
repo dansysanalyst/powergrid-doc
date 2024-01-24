@@ -7,7 +7,7 @@ You can find this method inside your PowerGrid file (e.g. `DishTable.php`).
 Example of usage:
 
 ```php
-//..
+//...
 use PowerComponents\LivewirePowerGrid\Header;
 use PowerComponents\LivewirePowerGrid\Footer;
 
@@ -261,7 +261,7 @@ Shows the record count at the page bottom.
 Available modes:
 
 - **full** (default): Full sentence. E.g., `Showing 1 to 10 of 100 Results`.
-- **short**: Only numbers including total. E.g, `1 - 10 | 100`.
+- **short**: Only numbers including total. e.g., `1 - 10 | 100`.
 - **min**: Only numbers, without total. E.g., `1 - 10`
 
 Example:
@@ -558,7 +558,7 @@ final class YourPowerGridTable extends PowerGridComponent
 }
 ```
 
-Multi-sorting behaves like chaining several `->orderBy(...)->orderBy(...)` [Laravel Eloquent](https://laravel.com/docs/9.x/eloquent) methods.
+Multi-sorting behaves like chaining several `->orderBy(...)->orderBy(...)` [Laravel Eloquent](https://laravel.com/docs/eloquent) methods.
 
 ---
 
@@ -566,7 +566,7 @@ Multi-sorting behaves like chaining several `->orderBy(...)->orderBy(...)` [Lara
 
 Sometimes we want to retrieve the same data that was recently displayed in a previous query and we don't want this to consume a new query request in the database because sometimes this can be time consuming, for example when we have a large query or using joins of several tables.
 
-For this, we can use the [Cache](https://laravel.com/docs/10.x/cache) technology already built into Laravel and implemented in Powergrid.
+For this, we can use the [Cache](https://laravel.com/docs/cache) technology already built into Laravel and implemented in Powergrid.
 
 This allows recording the same data when filtering, searching for something in the global search, changing pages or even ordering the table without having to query the database again for the same information.
 
@@ -591,7 +591,7 @@ public function setUp(): array
 
 | Method        |                                                                                                                                                 |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| `forever()`   | Create a cache using the [rememberForever](https://laravel.com/docs/10.x/cache#retrieve-store) method                                           |
+| `forever()`   | Create a cache using the [rememberForever](https://laravel.com/docs/cache#retrieve-store) method                                           |
 | `ttl()`       | Time in seconds that the cache will be available                                                                                                |
 | `customTag()` | By default, PowerGrid will create a Tag for each table like this example: `powergrid-users-validationTable` : powergrid-{modelName}-{tableName} |
 | `prefix()`    | Prefix of the 'Key' that will be used in the Cache.                                                                                             |
@@ -599,7 +599,7 @@ public function setUp(): array
 
 ### Clear cache
 
-it is recommended to always [clear the cache](https://laravel.com/docs/10.x/cache#removing-tagged-cache-items) whenever the model is updated.
+it is recommended to always [clear the cache](https://laravel.com/docs/cache#removing-tagged-cache-items) whenever the model is updated.
 
 Ex:
 
