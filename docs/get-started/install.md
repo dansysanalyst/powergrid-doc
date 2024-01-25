@@ -27,11 +27,9 @@ php artisan vendor:publish --tag=livewire-powergrid-config
 
 The configuration file will be available at: `config/livewire-powergrid.php`.
 
-### 3. Configure PowerGrid
+`✅` All done! You are now ready to configure PowerGrid. Read more in the [Configure PowerGrid](/get-started/configure.html) section.
 
-All done! Now you are ready to go on and [configure](/get-started/configure.html) PowerGrid in your Laravel application.
-
-### 4. Publish files (OPTIONAL)
+### 3. Publish files (OPTIONAL)
 
 ::: warning ⚠️ WARNING
  This step is only necessary if you wish to customize PowerGrid internal resources.
@@ -48,4 +46,3 @@ To publish Language files, run the following command.
 ```bash
 php artisan vendor:publish --tag=livewire-powergrid-lang
 ```
-

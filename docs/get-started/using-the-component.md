@@ -30,7 +30,7 @@ Alternatively, you can use the Livewire Blade directive.
 @livewire('dish-table')
 ```
 
-🥳 Hurrah! You are now ready to [set up](/table/features-setup.html) your PowerGrid component features!
+`✅` OK! You are now ready to begin the component setup process. Read more in the  [Datasource](/table-component/datasource.html) section.
 
 ## Component in Sub-folder
 
@@ -78,4 +78,3 @@ final class DishesTable extends PowerGridComponent
     //...
 }
 ```
-

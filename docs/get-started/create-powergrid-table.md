@@ -103,7 +103,7 @@ In our example, we have:
 
 <br/>
 
-Read more about how to include your component in a Blade View in the [Using the component](/get-started/using-the-component) section.
+`✅` It's time to include your component in a Blade View. Find out more in the [Using the component](/get-started/using-the-component) section.
 
 ## Component Stubs
 

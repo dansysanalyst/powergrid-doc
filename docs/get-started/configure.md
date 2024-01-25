@@ -38,7 +38,7 @@ At the moment, the following features are exclusive to the Tailwind theme.
 * [Filters outside](configure?id=_7-filters)
 
 ::: tip 💡 TIP
- Read more on how to create your own [Custom Theme](../table/custom-theme).
+Read more on how to customize PowerGrid themes in the [Custom Theme](../table/custom-theme) section.
 :::
 
 ## 3. Import theme Assets
@@ -61,9 +61,11 @@ Alternatively, for Bootstrap 5, add the following code.
 import './../../vendor/power-components/livewire-powergrid/dist/bootstrap5.css'
 ```
 
+`✅` All right! Stay in this section to modify other theme settings, or let's create our first component! Read more in the [Create a PowerGrid Table](/get-started/create-powergrid-table.html) section.
+
 ## 4. Configure Tailwind
 
-If you are using Tailwind, you may configure the options below.
+If you are using Tailwind, you may configure some aditional settings described in this section.
 
 ### Dark Mode
 
