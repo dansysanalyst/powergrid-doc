@@ -8,15 +8,13 @@ For example, when creating a "dishes table", you may want to fetch the ID, name,
 
 All this configuration is handled by the method `fields()` inside your component. Let's explore it here!
 
-## Fetch Fields
+## Fetching Fields
 
-To fetch fields, call `PowerGrid::fields()` method and proceed with chaining one add()` method per field. You can add as many fields as you need.
+To get started, call the  method `PowerGrid::fields()` and proceed with chaining one `add()` for each field you want to fetch. You can add as many fields as you need.
 
-Each time you add a field, you must pass the _field name_ to the `add($field)` argument. This indicates where the data will be retrieved from.
+Each time you add a field, you must pass the argument `$fieldName` argument, indicating where the data will be retrieved from.
 
-For database relationships, you can use the _"table_name.field_name"_ format (e.g., `dishes.name`).
-
-If you need to treat or format the data obtained, check the [Formatting Data](#formatting-data-with-custom-fields) subsection.
+If you need to format the retrivied data, check the [Formatting Data](#formatting-data-with-custom-fields) subsection.
 
 The next example fetches data from three fields: _id_, _name_ and _in_stock_.
 
@@ -46,13 +44,9 @@ final class DishesTable extends PowerGridComponent
 
 ## Join/Relationship Fields
 
-In addition to a data source `$field`, PowerGrid accepts a `closure` function as a second argument to the `fields()` method.
+As we have seen in the [Join Tables](/table-component/datasource.html#join-tables) example, we have two database tables to interconnect, and both have a field called "name". Each dish has a category and a name. Each category has a name.
 
-This allows you to create a `Custom Field` returning the relationship data with its unique name.
-
-For the next example, let's imagine a scenario where each dish belongs to a category.
-
-Both database fields have the field `name`, so we will return `name` (from `dishes.name`), and `categories.name` under the custom field name "category_name".
+In the next example, we will fetch the field `name` (from `dishes.*`), and fetch the field `categories.name` using the aliased field `category_name`.
 
 ```php{14,15}
 // app/Livewire/DishTable.php
@@ -76,7 +70,9 @@ final class DishesTable extends PowerGridComponent
 }
 ```
 
-Read more about data sourcing Relationships in the [Join Tables](/table-component/datasource.html#join-tables) subsection.
+:::info 🌎 Online Demo
+See an interactive example of using Join [here](http://powergrid-demo.test/examples/join).
+:::
 
 ## Formatting Data with Custom Fields
 

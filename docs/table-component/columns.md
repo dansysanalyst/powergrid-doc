@@ -111,9 +111,9 @@ When dealing with columns containing data from database relationships, in additi
 
 The `$dataField` argument indicates the link to this column's original data. This will be used for searching, among other features.
 
-When joining tables, you may encounter a relationship like "_The dish [name] belongs to a category [name]_". As you can see, both tables have the same field `name` (dishes.name and categories.name). PowerGrid requires unique column fields to work properly.
+When joining tables, you may encounter a relationship like "_The dish [name] belongs to a category [name]_". This case is referenced in the [Join Tables](/table-component/datasource.html#join-tables) subsection.
 
-The next example shows how to reference such relationships using the method `make()`.
+The next example shows how to use the method `make()` to create a column from a joined table.
 
 ```php{9,10,11}
 // app/Livewire/DishTable.php
